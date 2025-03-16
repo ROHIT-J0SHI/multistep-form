@@ -14,7 +14,6 @@ This project demonstrates a multi-step form with a visual progress bar, built us
 * `index.html`: Contains the HTML structure of the form.
 * `styles.css`: Contains the CSS styling for the form and progress bar.
 * `script.js`: Contains the JavaScript logic for form navigation and progress updates.
-* `assets/formbg.png`: Background image.
 
 ## How to Use
 
@@ -29,7 +28,6 @@ This project demonstrates a multi-step form with a visual progress bar, built us
 * Modify `styles.css` to change the form's appearance.
 * Update `script.js` to add or modify form validation.
 * Add more steps to the form by duplicating and modifying the existing form elements and updating the javascript logic.
-* Replace `assets/formbg.png` with a different background image.
 
 ## Notes
 

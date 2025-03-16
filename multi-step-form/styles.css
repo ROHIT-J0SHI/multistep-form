@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --line-border-fill: #200cd3;
+    --line-border-empty: #383838;
+    --dark-color: #1c2833;
+    --light-gray-color: #ddd;
+    --white-color: #fff;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Nunito", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: radial-gradient(
+        circle, 
+        rgb(99, 137, 250) 0%,
+        rgb(166, 246, 185) 0%,
+        rgba(151,156,203,1) 100%
+    );
+}
+
+.container{
+    width: 450px;
+    height: 500px;
+    margin: 2rem auto;
+    align-items: center;
+    background-color: var(--white-color);
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    position: relative;
+}
+
+h3{
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--dark-color);
+    font-size: 2rem;
+}
+
+.container form{
+    width: 340px;
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    transition: 0.5s ease-in;
+}
+
+form input{
+    width: 100%;
+    height: 50px;
+    padding: 10px 5px;
+    margin: 5px 0;
+    font-size: 1rem;
+    border: 1px solid var(--light-gray-color);
+    border-radius: 5px;
+    background: transparent;
+}
+
+form input:focus{
+    outline: none;
+    border: 1px solid var(--dark-color);
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid var(--light-gray-color);
+    border-radius: 5px;
+    background: transparent;
+    font-size: 1rem;
+    color: var(--dark-color);
+    cursor: pointer;
+    appearance: none; /* Hides default dropdown arrow */
+    background-color: var(--white-color);
+}
+
+select::after {
+    content: "▼";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+select option {
+    background-color: var(--white-color);
+    color: var(--dark-color);
+}
+
+select:hover {
+    border: 1px solid var(--dark-color);
+}
+
+select:focus {
+    outline: none;
+    border: 1px solid var(--line-border-fill);
+}
+
+
+.btn-box{
+    width: 100%;
+    margin: 30px auto;
+    text-align: center;
+}
+
+button{
+    width: 110px;
+    height: 40px;
+    margin: 0 10px;
+    background-color: var(--line-border-fill);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    color: var(--light-gray-color);
+}
+
+button:active{
+    transform: scale(0.98);
+}
+
+#form2, #form3 {
+    left: 450px;
+}
+
+#form3 {
+    position: absolute;
+    top: 100px;
+    left: 450px;
+    width: 340px;
+    transition: 0.5s ease-in;
+}
+
+#form3 p {
+    font-size: 1rem;
+    color: var(--dark-color);
+    padding: 5px 0;
+}
+
+
+.progress-container{
+    width: 350px;
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem auto;
+    position: relative;
+}
+
+.progress-container::before{
+    content: '';
+    background-color: var(--light-gray-color);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 100%;
+    z-index: 1;
+}
+
+.progress{
+    background-color: var(--line-border-fill);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 0%;
+    z-index: 1;
+    transition: 0.4s ease-in;
+}
+
+.circle{
+    background-color: var(--light-gray-color);
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    z-index: 1;
+    transition: 0.4s ease-in;
+}
+
+.circle.active{
+    border-color: var(--line-border-empty);
+    color: var(--white-color);
+    background-color: var(--line-border-fill);
+}

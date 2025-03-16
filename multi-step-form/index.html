@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Step Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Step 1 -->
+        <form id="form1">
+            <h3>Basic Details</h3>
+            <input type="text" id="name" placeholder="Name">
+            <input type="number" id="age" placeholder="Age">
+            <input type="text" id="gender" placeholder="Gender">
+
+            <div class="btn-box">
+                <button type="button" id="next1">Next</button>
+            </div>
+        </form>
+
+        <!-- Step 2 -->
+        <form id="form2">
+            <h3>Contact Information</h3>
+            <input type="email" id="email" placeholder="Email">
+            <input type="number" id="phone" placeholder="Phone">
+            <input type="text" id="address" placeholder="Address">
+
+            <div class="btn-box">
+                <button type="button" id="back1">Back</button>
+                <button type="button" id="next2">Next</button>
+            </div>
+        </form>
+
+        <!-- Step 3 (Summary) -->
+        <div id="form3">
+            <h3>Summary</h3>
+            <p><strong>Name:</strong> <span id="summary-name"></span></p>
+            <p><strong>Date of Birth:</strong> <span id="summary-dob"></span></p>
+            <p><strong>Gender:</strong> <span id="summary-gender"></span></p>
+            <p><strong>Email:</strong> <span id="summary-email"></span></p>
+            <p><strong>Phone:</strong> <span id="summary-phone"></span></p>
+            <p><strong>Address:</strong> <span id="summary-address"></span></p>
+
+            <div class="btn-box">
+                <button type="button" id="back2">Back</button>
+                <button type="submit" id="submit">Submit</button>
+            </div>
+        </div>
+
+        <div class="progress-container">
+            <div class="progress" id="progress"></div>
+            <div class="circle active">1</div>
+            <div class="circle">2</div>
+            <div class="circle">3</div>            
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
